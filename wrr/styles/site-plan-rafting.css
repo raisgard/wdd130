@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+VIC:wght@100..400&family=Playwrite+DE+Grund:wght@100..400&display=swap');
+
+body {
+  font-family: var(--paragraph-font);
+  max-width: 960px;
+  padding: 20px;
+}
+
+:root {
+  --primary-color: #EBBAB9;
+  --secondary-color: #9BF3F0;
+  --accent1-color: #6F8AB7;
+  --accent2-color: #5D737E;
+
+  --heading-font: 'Playwrite Deutschland Grundschrift';
+  --paragraph-font: 'Playwrite Australia Victoria';
+
+  --nav-background-color: #B3001B;
+  --nav-link-color: #FCBCB8;
+  --nav-hover-link-color: #773344;
+  --nav-hover-background-color: #F5D3C8;
+}
+      
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--secondary-color);
+}
+
+header {
+  padding: 20px;
+  background-color: var(--accent1-color);
+}
+
+p {
+  padding: 25px;
+}
+
+nav {
+  background-color: var(--nav-background-color);
+  font-size: 1.2rem;
+  display: flex;
+}
+
+nav a {
+  display: block;
+  color: var(--nav-link-color);
+  text-decoration: none;
+  padding: 1rem;
+}
+
+nav a:link, nav a:visited {
+  color: var(--nav-link-color);
+}
+
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+}
