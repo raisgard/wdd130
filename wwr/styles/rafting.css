@@ -115,11 +115,6 @@ section h2 {
   text-align: justify;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
 footer {
   display: grid;
   grid-template-columns: 4fr 1fr;
@@ -149,13 +144,140 @@ footer p {
   box-sizing: border-box;
 }
 
+.history {
+  display: grid;
+  text-align: justify;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+form {
+  width: 60%;
+  margin: 0 auto;
+  padding: 1rem;
+  display: grid;
+}
+
+fieldset {
+  display: grid;
+  grid-gap:  .5rem;
+  margin: 1rem;
+  border: 1px solid rgba(0,0,0,0.2);
+  padding: 1rem;
+}
+
+legend {
+  padding: .5rem;
+  color: var(--secondary-color);
+  font-size: 1.3rem;
+}
+
+label, input, button, select, textarea {
+  font-family: var(--heading-font);
+  color: var(--accent2-color);
+}
+
+label {
+  text-align: left;
+}
+
+input, select, textarea {
+  padding: .5rem;
+  font-size: 1.1rem;
+  margin: .5rem 0;
+}
+
+input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  vertical-align: bottom;
+  margin: 0;
+}
+
+button {
+  margin: auto;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: .5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 200px;
+}
+
+button:hover {
+  font-size: 1.4rem;
+  background-color:  var(--nav-hover-background-color);
+}
+
+table {
+  border: 0.1px solid var(--primary-color);
+  justify-content: center;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+}
+
+th {
+  background-color: var(--accent2-color);
+  border: .1px solid var(--primary-color);
+  padding: 1rem;
+}
+
+td {
+  background-color: var(--accent1-color);
+  border: .1px solid var(--primary-color);
+  padding: 0.5rem;
+}
+
+
+/*Class Selector*/
+
+.navigation {
+  display: flex;
+  list-style: none;
+}
+
+.navigation li {
+  flex: 1 1 100%;
+  text-align: center;
+}
+
+.hero article {
+  position: absolute;
+  background-color: rgba(var(--accent2-color), 0.8);
+  width: 80%;
+  padding: 12px;
+  left: 50%;
+  margin-top: -40%;
+  margin-left: -40%;
+  color: white;
+}
+
+.trips {
+    display: grid;
+    text-align: justify;
+    grid-template-columns: 1fr;
+}
+
+.trips p {
+    margin-top: 1rem;
+}
+
 .adventure {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 }
 
+.team {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-content: center;
+}
 
-.adventure figure {
+.adventure figure,
+.team figure {
   border: thin #c0c0c0 solid;
   display: flex;
   flex-flow: column;
@@ -165,13 +287,15 @@ footer p {
   height: 300px;
 }
 
-.adventure figure img{
+.adventure figure img,
+.team figure img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.adventure figcaption {
+.adventure figcaption,
+.team figcaption {
   background-color: rgba(var(--accent2-color), 1);
   color: #298b88;
   font: italic smaller sans-serif;
@@ -179,8 +303,110 @@ footer p {
   text-align: center;
 }
 
-.history {
+.gallery img {
+  width: 400px;
+  height: auto;
+}
+
+.gallery p{
+  padding: 0 0 12px 0;
+  margin: 0;
+}
+
+.social-links img{
+  width: 24px;
+}
+
+.message-us {
+  background-color:#81D3FF;
+}
+
+.form-item {
   display: grid;
-  text-align: justify;
-  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  color: var(--accent2-color);
+}
+
+.column-1 {
+  grid-template-columns: 1fr;
+  margin: 0.5rem 0;
+}
+
+.column-2 {
+  grid-template-columns: 1fr 2fr;
+}
+
+.expandable {
+  resize: vertical;
+  overflow-x: hidden;
+  min-height: 1.2em;
+  overflow-y: auto;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.contact-information span,
+.contact-information p {
+  padding-left: 8px;
+  display: inline;
+}
+
+.iframe-container {
+  width: auto;
+}
+
+.iframe-container iframe {
+  width: 100%;
+}
+
+.home-button {
+  position: absolute;
+  bottom: 10%;
+  left: 40%;
+  text-decoration: none;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: 1px solid #144389;
+  padding: .5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  min-width: 300px;
+}
+
+.home-button:hover {
+  text-decoration: none;
+  text-align: center;
+  margin: auto;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: .5rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  min-width: 300px;
+  border: 1px solid #1C3F80;
+}
+
+.reserve-button {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: #144389;
+  color: white;
+  text-align: center;
+  margin: 1rem 4rem;
+  padding: 8px;
+}
+
+.reserve-button:hover {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: #4675cf;
+  color: white;
+  text-align: center;
+  margin: 1rem 4rem;
+  padding: 8px;
 }
